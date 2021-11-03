@@ -1,11 +1,12 @@
+//package CreationalPatterns;
 
-public class ExampleSingleton {
+public class Singleton {
     // lazy construction
     // the class variable is null if no instance is instantiated
     private static ExampleSingleton uniqueInstance = null;
 
     private int count;
-    private ExampleSingleton() {
+    private Singleton() {
         count = 1;
     }
     public int getCount() {
@@ -18,7 +19,7 @@ public class ExampleSingleton {
     // lazy construction of the instance
     public static ExampleSingleton getInstance() {
         if (uniqueInstance == null) {
-            uniqueInstance = new ExampleSingleton();
+            uniqueInstance = new Singleton();
         }
         return uniqueInstance;
     }
